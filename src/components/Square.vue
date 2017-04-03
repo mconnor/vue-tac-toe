@@ -7,18 +7,18 @@
 <script>
 export default {
   props: {
-    i: Number,
+    index: Number,
     value: null,
     onClick: Function,
   },
   data() {
     return {
-      privateState: { value: 'j' },
+      privateState: { value: '' },
     };
   },
   methods: {
     handleClick() {
-      this.$emit('onClick');
+      this.$emit('onClick', this.index);
     },
   },
 };
