@@ -1,6 +1,6 @@
 # vue-tac-toe
 
-> A vue version of the react tic-tac-toe tutorial
+> A vue version of the react tic-tac-toe tutorial.  Work in Progress!
 
 ## Build Setup
 
