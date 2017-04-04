@@ -1,6 +1,8 @@
 <template>
 <div id="app">
-
+  <p>{{msg}}</p>
+      <p>React tutorial done in Vue.js. Code on <a href="https://github.com/mconnor/vue-tac-toe">github</a></p>
+      <game></game>
       <game></game>
 </div>
 </template>
@@ -12,6 +14,11 @@ export default {
   name: 'app',
   components: {
     Game,
+  },
+  data() {
+    return {
+      msg: '<game></game> gets you one game of tic-tac-toe',
+    };
   },
 };
 </script>
