@@ -4,8 +4,8 @@
             <div>{{msg}}</div>
             <div>{{status}}</div>
       </div>
-      <div className="game-board">i
-          <board :store=store v-on:onClick="onGameHandleClick"></board>
+      <div className="game-board">
+            <board :store=store v-on:onClick="onGameHandleClick"></board>
       </div>
 </div>
 </template>
@@ -56,23 +56,21 @@ export default {
   methods: {
     onGameHandleClick: function onGameHandleClick(i) {
       const squares = this.store.state.squares.slice();
-      if (calculateWinner(squares) || squares[i]) {
-        /* eslint no-console: ["error", { allow: ["warn", "error"] }] */
-        console.warn('winner');
-        this.status = `${this.store.state.xIsNext ? 'O' : 'X'} is the winner`;
-        return;
-      }
-      /* eslint no-console: ["error", { allow: ["warn", "error"] }] */
-      console.warn('no winner yet');
+      if (!squares[i]) {
+        squares[i] = this.store.state.xIsNext ? 'X' : '0';
+        this.store.state.squares = squares;
+        this.store.state.xIsNext = !this.store.state.xIsNext;
+        this.status = `Next player: ${this.store.state.xIsNext ? 'X' : 'O'}`;
 
-      squares[i] = this.store.state.xIsNext ? 'X' : '0';
-      this.store.state.squares = squares;
-      this.store.state.xIsNext = !this.store.state.xIsNext;
-      this.status = `Next player: ${this.store.state.xIsNext ? 'X' : 'O'}`;
+        if (calculateWinner(squares)) {
+          /* eslint no-console: ["error", { allow: ["warn", "error"] }] */
+          console.warn('winner');
+          this.status = `${this.store.state.xIsNext ? 'O' : 'X'} is the winner`;
+        }
+      }
     },
   },
 };
-
 </script>
 <style>
 body {
