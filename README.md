@@ -1,6 +1,10 @@
 # vue-tac-toe
 
-> A vue version of the react tic-tac-toe tutorial.  Work in Progress!
+> A vue.js version of the react [tic-tac-toe tutorial](https://facebook.github.io/react/tutorial/tutorial.html).  Not using [vuex](https://vuex.vuejs.org/) at this point for handling stage.
+
+## Todo
+- Handle _state_ with [vuex](https://vuex.vuejs.org/)
+- Add replay history
 
 ## Build Setup
 

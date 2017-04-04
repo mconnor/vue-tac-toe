@@ -51,20 +51,20 @@ export default {
         },
       },
       status: 'play',
+      winner: false,
     };
   },
   methods: {
     onGameHandleClick: function onGameHandleClick(i) {
       const squares = this.store.state.squares.slice();
-      if (!squares[i]) {
+      if (!squares[i] && !this.winner) {
         squares[i] = this.store.state.xIsNext ? 'X' : '0';
         this.store.state.squares = squares;
         this.store.state.xIsNext = !this.store.state.xIsNext;
         this.status = `Next player: ${this.store.state.xIsNext ? 'X' : 'O'}`;
 
         if (calculateWinner(squares)) {
-          /* eslint no-console: ["error", { allow: ["warn", "error"] }] */
-          console.warn('winner');
+          this.winner = true;
           this.status = `${this.store.state.xIsNext ? 'O' : 'X'} is the winner`;
         }
       }
