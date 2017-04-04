@@ -1,7 +1,12 @@
 {
   "name": "vue-tac-toe",
   "version": "1.0.0",
-  "description": "A vue version of the react tic-tac-toe tutorial",
+  "homepage": "https://mconnor.github.io/vue-tac-toe/",
+  "description": "A vue.js version of the react tic-tac-toe tutorial",
+  "repository" : {
+   "type" : "git",
+    "url" : "https://github.com/mconnor/vue-tac-toe.git"
+  },
   "author": "mike connor <mike@rocketnumber9.org>",
   "private": true,
   "scripts": {
