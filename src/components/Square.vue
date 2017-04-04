@@ -13,7 +13,7 @@ export default {
   },
   data() {
     return {
-      privateState: { value: '' },
+      // privateState: { value: '' },
     };
   },
   methods: {

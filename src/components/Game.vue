@@ -2,6 +2,7 @@
 <div className="game">
       <div className="game-info">
             <div>{{msg}}</div>
+            <div>{{status}}</div>
       </div>
       <div className="game-board">i
           <board :store=store v-on:onClick="onGameHandleClick"></board>
@@ -49,6 +50,7 @@ export default {
             .fill(null),
         },
       },
+      status: 'play',
     };
   },
   methods: {
@@ -57,16 +59,16 @@ export default {
       if (calculateWinner(squares) || squares[i]) {
         /* eslint no-console: ["error", { allow: ["warn", "error"] }] */
         console.warn('winner');
+        this.status = `${this.store.state.xIsNext ? 'O' : 'X'} is the winner`;
         return;
       }
       /* eslint no-console: ["error", { allow: ["warn", "error"] }] */
       console.warn('no winner yet');
 
       squares[i] = this.store.state.xIsNext ? 'X' : '0';
-
       this.store.state.squares = squares;
       this.store.state.xIsNext = !this.store.state.xIsNext;
-      this.store.status = `Next player: ${this.store.state.xIsNext ? 'X' : 'O'}`;
+      this.status = `Next player: ${this.store.state.xIsNext ? 'X' : 'O'}`;
     },
   },
 };
