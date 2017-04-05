@@ -20,7 +20,7 @@ export default {
 </script>
 
 <style lang="scss">
-
+$square-size: 68px;
 
 .square {
     background: #0ff;
@@ -28,13 +28,13 @@ export default {
     float: left;
     font-size: 24px;
     font-weight: bold;
-    line-height: 34px;
-    height: 34px;
+    line-height: $square-size;
+    height: $square-size;
     margin-right: -1px;
     margin-top: -1px;
     padding: 0;
     text-align: center;
-    width: 34px;
+    width: $square-size;
 }
 
 .square:focus {

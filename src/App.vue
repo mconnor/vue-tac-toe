@@ -2,8 +2,9 @@
 <div id="app">
   <p>{{msg}}</p>
       <p>React tutorial done in Vue.js. Code on <a href="https://github.com/mconnor/vue-tac-toe">github</a></p>
+<div class='myrow'>
       <game></game>
-      <game></game>
+      <game></game></div>
 </div>
 </template>
 
@@ -31,5 +32,11 @@ export default {
     text-align: center;
     color: #2c3e50;
     margin-top: 60px;
+}
+.myrow {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
 }
 </style>
