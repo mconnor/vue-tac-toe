@@ -10,7 +10,7 @@
 </div>
 </template>
 <script>
-import Board from './Board';
+import Board from './Board.vue'
 
 function calculateWinner(squares) {
   const lines = [

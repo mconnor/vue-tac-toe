@@ -11,11 +11,6 @@ export default {
     value: null,
     onClick: Function,
   },
-  data() {
-    return {
-      // privateState: { value: '' },
-    };
-  },
   methods: {
     handleClick() {
       this.$emit('onClick', this.index);
@@ -24,10 +19,12 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+
+
 .square {
     background: #0ff;
-    border: 1px solid #999;
+    border: 2px solid #999;
     float: left;
     font-size: 24px;
     font-weight: bold;
