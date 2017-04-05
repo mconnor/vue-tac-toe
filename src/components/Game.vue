@@ -72,7 +72,7 @@ export default {
   },
 };
 </script>
-<style>
+<style lang="css">
 body {
     font: 14px "Century Gothic", Futura, sans-serif;
     margin: 20px;
