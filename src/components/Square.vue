@@ -19,22 +19,26 @@ export default {
 };
 </script>
 
-<style lang="css">
-
+<style lang="scss" scoped>
+@import url('https://fonts.googleapis.com/css?family=Caveat+Brush');
+$box-size: 68px;
+$hopbush: #c69;
 
 .square {
-    background: #0ff;
+    font-family: 'Caveat Brush', cursive;
+    color: white;
+    background: $hopbush ;
     border: 2px solid #999;
     float: left;
-    font-size: 24px;
+    font-size: 48px;
     font-weight: bold;
-    line-height: 68px;
-    height: 68px;
+    line-height: $box-size;
+    height: $box-size;
     margin-right: -1px;
     margin-top: -1px;
     padding: 0;
     text-align: center;
-    width: 68px;
+    width: $box-size;
 }
 
 .square:focus {
