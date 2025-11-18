@@ -14,7 +14,7 @@
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
-    "svgo": "^0.7.2",
+    "svgo": "^2.0.0",
     "vue": "^2.2.1"
   },
   "devDependencies": {
